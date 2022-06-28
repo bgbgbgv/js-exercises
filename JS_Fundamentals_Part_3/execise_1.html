@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Function expression
+        // console.log("Hallo Welt");
+        function addSeven(number_) {
+            return number_ + 7;
+        }
+        let ret = addSeven(4);
+        console.log(ret);
+
+        //Alternative in arrow-function-syntax:
+        add7 = (num) => num+7;
+        console.log(add7(4))
+
+
+        function multiply(m,n) {
+            let mnProduct = m * n;
+            return mnProduct;
+        }
+
+        console.log("The product of 4 and 23 is: " + multiply(4, 23));
+
+        //Alternative in arrow-function-syntax:
+        mply = (m,n) => m*n;
+        console.log("The product of 4 and 23 is: " +mply(4, 23))
+
+        function capitalize(s) {
+            return(s[0].toUpperCase()+s.substr(1).toLowerCase());
+        }
+        console.log("The result for 'lowercase, UPPERCASE, BoTh' is: " 
+            + capitalize('lowercase') + ", " + capitalize('UPPERCASE') 
+            + ", " + capitalize('BoTh'));
+
+        cptlz = s => s[0].toUpperCase()+s.substr(1).toLowerCase();
+        console.log("The result for 'lowercase, UPPERCASE, BoTh' is: " 
+            + cptlz('lowercase') + ", " + cptlz('UPPERCASE') 
+            + ", " + cptlz('BoTh'));
+
+        function lastLetter(s) {
+            return s.substr(-1);
+        }
+
+        console.log(lastLetter("abcd"))
+
+
+        ask = (question, yes, no) => {
+            if (confirm(question)) yes();
+            else no();
+        }
+
+        ask(
+            "Do you agree?",
+            () => { alert("You agreed."); },
+            () => { alert("You canceled the execution."); }
+        );
+
+    </script>
+</body>
+</html>
+
+<!-- For now, just write each function and test the output with console.log.
+
+
+Write a function called lastLetter that takes a string and returns the very 
+last letter of that string:
+    lastLetter("abcd") should return "d" -->
+
